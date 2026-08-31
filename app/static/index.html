@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Notes Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="header">
+            <h1>✨ Memo AI</h1>
+            <p>Your intelligent voice notes assistant.</p>
+        </div>
+
+        <div class="input-card">
+            <textarea id="manualInput" placeholder="Type your notes here, or use the buttons below..."></textarea>
+            
+            <div class="button-row">
+                <!-- Instructor's File Upload Option -->
+                <label for="audioUpload" class="action-btn outline">
+                    📁 Upload Audio
+                </label>
+                <input type="file" id="audioUpload" accept="audio/*" style="display: none;">
+                
+                <button class="action-btn primary" id="recordBtn">🎙️ Speak Now</button>
+                <button class="action-btn outline" id="submitTextBtn">🚀 Process Text</button>
+            </div>
+        </div>
+
+        <div class="response-card">
+            <h3>🧠 AI Response</h3>
+            <div id="actionItemsText" class="response-text">
+                Your organized notes will appear here...
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

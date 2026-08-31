@@ -1,0 +1,126 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fdcbf1, #e6dee9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.app-container {
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.header p { color: #4a5568; font-size: 14px; }
+
+.input-card, .response-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* THIS FIXES THE SQUISHED BOX */
+textarea {
+    width: 100%; 
+    height: 100px;
+    border: none;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.action-btn[for="audioUpload"] {
+    background: linear-gradient(135deg, #10b981, #059669); 
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+#recordBtn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb); 
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+#submitTextBtn {
+    background: linear-gradient(135deg, #f59e0b, #d97706); 
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.action-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.response-card h3 {
+    font-size: 15px;
+    color: #4c1d95;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.response-text {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #334155;
+    padding-left: 10px;
+    border-left: 3px solid #ddd6fe;
+}
