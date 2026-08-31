@@ -43,7 +43,7 @@ a clean summary with clear action items.
    python -m uvicorn app.main:app --reload
    ```
 
-5. Open `http://127.0.0.1:8000` in your browser and try it out.
+5. Open `http://127.0.0.1:1101` in your browser and try it out.
 
 ## Approach
 
